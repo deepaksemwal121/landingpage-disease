@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap");
+
+h1 {
+  font-family: "DM Serif Display", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p,
+li,
+span,
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  background-color: #f0f0f5;
+  height: 90vh;
+  z-index: -1;
+}
+
+.hero .hero__right {
+  /* background-image:url("https://images.unsplash.com/photo-1622253692010-333f2da6031d"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.symptoms-chest {
+  width: 527px;
+  height: 300px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(18, 2, 120, 0.3),
+      rgba(9, 59, 113, 0.5)
+    ),
+    url("https://www.singhealth.com.sg/sites/shcommonassets/Assets/conditions-treatments/heart-chest-pain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.symptoms-heart {
+  width: 527px;
+  height: 300px;
+  background: linear-gradient(
+      0deg,
+      rgba(18, 2, 120, 0.3),
+      rgba(9, 59, 113, 0.5)
+    ),
+    url("https://www.narayanahealth.org/sites/default/files/pillar-page/irregular-heartbeat-banner-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.symptoms-breath {
+  width: 528px;
+  height: 300px;
   display: flex;
-  flex-direction: column;
+  background-image: linear-gradient(
+      0deg,
+      rgba(18, 2, 120, 0.3),
+      rgba(9, 59, 113, 0.5)
+    ),
+    url("https://post.healthline.com/wp-content/uploads/2020/01/non_rebreather_mask_732x549-thumbnail.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
   align-items: center;
+}
+.symptoms {
+  font-size: 30px;
+  font-weight: 500;
+  color: #f0f0f5;
+  width: 100%;
+}
+
+.modal__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  opacity: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-video;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  z-index: 100;
+}
+
+.modal__align {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.modal__content {
+  width: auto;
+  height: auto;
+  box-shadow: 0px 100px 80px rgba(184, 184, 184, 0.07),
+    0px 25.8162px 19px 4px rgba(178, 178, 178, 0.0456112),
+    0px 7.779px 7.30492px rgba(0, 0, 0, 0.035),
+    0px 1.48838px 2.0843px rgba(0, 0, 0, 0.0243888);
+  border-radius: 20px;
+  background: transparent;
+  color: #000;
+  margin: 0rem 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
+.modal__close {
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.modal__video-align {
+  display: flex;
+  position: relative;
+  bottom: 37px;
+}
+
+.modal__video-style {
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.modal__spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__spinner {
+  animation: spin 2s linear infinite;
+  font-size: 40px;
+  color: #1b6aae;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 800px) {
+  .modal__content {
+    margin: 0rem 1rem;
+    width: 100%;
+  }
+  .modal__video-style {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .modal__content {
+    background: transparent;
+    height: auto;
+  }
+  .modal__video-align {
+    bottom: 0px;
+  }
+  .modal__video-style {
+    height: auto;
+  }
+}
+
+.video__placeholder {
+  background: linear-gradient(
+      0deg,
+      rgba(18, 2, 120, 0.3),
+      rgba(9, 59, 113, 0.5)
+    ),
+    url("https://cdn.sanity.io/images/0vv8moc6/ajmc/7faabe1a478bfea6d9535beaf7f722e7a21eb685-1279x853.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
