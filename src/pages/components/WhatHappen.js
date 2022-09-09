@@ -15,9 +15,9 @@ const WhatHappen = () => {
     setVideoLoading(!videoLoading);
   };
   return (
-    <div className="px-32 py-16 bg-gray-100 space-x-12 w-full flex">
-      <div className="w-1/2">
-        <h1 className="text-[50px]">What happens during CABG?</h1>
+    <div className="px-16 py-8 md:px-32 md:py-16 bg-gray-100 space-x-12 w-full md:flex">
+      <div className="md:w-1/2">
+        <h1 className=" text-[40px] md:text-[50px]">What happens during CABG?</h1>
         <p className="text-lg mb-4">
           CABG usually lasts for 3-6 hours. But it may take longer depending on
           how many blood vessels are being attached.
@@ -53,7 +53,7 @@ const WhatHappen = () => {
           </ol>
         </p>
       </div>
-      <div className="flex w-1/2 justify-center items-center video__placeholder">
+      <div className="flex w-[200px] md:w-1/2 justify-center items-center video__placeholder">
         <AiOutlinePlayCircle onClick={openModal} size={100} color="orange" />
         {modal ? (
           <section className="modal__bg">

@@ -2,9 +2,9 @@ import parasBest from "../assets/parasChoose.png";
 
 const MedantaBest = () => {
   return (
-    <div className="px-32 py-16 w-full bg-gray-100 text space-x-8 flex">
-      <div className="w-1/2 space-y-4">
-        <h1 className="text-[45px] border-b-2 w-fit border-blue-900 ">
+    <div className=" px-16 py-8 md:px-32 md:py-16 w-full bg-gray-100 text md:space-x-8 md:flex">
+      <div className="md:w-1/2 space-y-4">
+        <h1 className="text-[30px] md:text-[45px] border-b-2 w-fit border-blue-900 ">
           Get Treated By The Best
         </h1>
         <p>
@@ -16,10 +16,10 @@ const MedantaBest = () => {
           accredited fellowships from the premier institutes of united states
           namely Mount Sinai New York and Michigan State University.
         </p>
-        <div className="grid grid-cols-3 gap-4 space-x-4">
+        <div className="grid md:grid-cols-3 gap-4 space-x-4">
           <div>
             <img
-              className="rounded-full border-gray-200 border-4"
+              className="rounded-full border-gray-200 border-4 w-[100px]"
               src="https://cdn.hexahealth.com/Image/122c238f-9572-4899-9cfe-46d8542fc6f3.jpg"
               alt="Dr1"
             />
@@ -50,20 +50,20 @@ const MedantaBest = () => {
           </div> */}
         </div>
       </div>
-      <div className="flex">
-        <div className="flex flex-col">
-          <div className="p-4  flex-col text-white flex items-center justify-center bg-[#00b9f2]  w-[250px] h-[250px]">
-            <p className="text-[50px] font-bold block">2500+</p>
+      <div className="md:flex">
+        <div className="flex md:flex-col">
+          <div className="p-4  flex-col text-white flex items-center justify-center bg-[#00b9f2]  w-[150px] h-[150px] md:w-[250px] md:h-[250px]">
+            <p className="text-[30px] md:text-[50px] font-bold block">2500+</p>
             <p>Cases</p>
           </div>
-          <div className="p-4 flex flex-col text-white items-center justify-center bg-[#adcd81] w-[250px] h-[250px]">
-            <p className="text-[50px] font-bold block">2000</p>
+          <div className="p-4 flex flex-col text-white items-center justify-center bg-[#adcd81] w-[150px] h-[150px] md:w-[250px] md:h-[250px]">
+            <p className="text-[30px] md:text-[50px] font-bold block">2000</p>
             <p className="text-center">Successfull Surgeries Performed</p>
           </div>
         </div>
         <div>
-          <img src={parasBest} alt="" />
-          <button className="bg-gradient-to-r from-[#adcd81] to-[#00b9f2] m-20 text-white w-2/3 py-2">
+          <img src={parasBest} className="hidden md:block" alt="" />
+          <button className="bg-gradient-to-r from-[#adcd81] to-[#00b9f2] md:m-20 text-white  w-full mt-10 md:w-2/3 py-2">
             Book Appointment
           </button>
         </div>

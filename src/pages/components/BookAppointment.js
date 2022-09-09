@@ -2,8 +2,8 @@ import contact from "../assets/contact.png"
 
 const BookAppointment = () => {
   return (
-    <div className='px-32 py-16 flex w-full'>
-        <div className='space-y-10 w-1/2'>
+    <div className='md:px-32 md:py-16 px-16 py-8 md:flex w-full'>
+        <div className='space-y-10 md:w-1/2'>
             <h1 className='text-[32px]'>Book Your Appointment with Our Specialists</h1>
             <form className='flex flex-col space-y-4 px-4'>
                 <>
@@ -27,7 +27,7 @@ const BookAppointment = () => {
         </button>
             </form>
         </div>
-        <div className="flex justify-center items-end w-1/2">
+        <div className="md:flex justify-center items-end hidden md:w-1/2">
             <img src={contact} alt= "" />
         </div>
     </div>

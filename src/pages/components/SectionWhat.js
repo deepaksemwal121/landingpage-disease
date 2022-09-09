@@ -2,8 +2,8 @@ import React from "react";
 import what from "../assets/what.png";
 const SectionWhat = () => {
   return (
-    <div className="px-32 py-16 flex space-x-4 items-center bg-gray-100">
-      <div className="w-1/2">
+    <div className="md:px-32 md:py-16 px-16 py-8 md:flex space-x-4 items-center bg-gray-100">
+      <div className="md:w-1/2">
         <h1 className="text-[50px]">
           What is CABG
           <lord-icon
@@ -23,7 +23,7 @@ const SectionWhat = () => {
           Read More
         </p>
       </div>
-      <div className="w-1/2">
+      <div className="md:w-1/2">
         <img src={what} alt="what" width={1000} />
       </div>
     </div>

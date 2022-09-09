@@ -173,6 +173,15 @@ button {
   .modal__video-style {
     width: 100%;
   }
+  .symptoms-breath,.symptoms-chest,.symptoms-heart{
+    width: 450px;
+  }
+  .symptoms{
+    font-size: 22px;
+  }
+  .hero{
+    height: 100vh;
+  }
 }
 
 @media screen and (max-width: 499px) {

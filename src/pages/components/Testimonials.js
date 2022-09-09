@@ -2,18 +2,18 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div className="px-32 py-16 flex w-full bg-gray-100">
-      <div className="w-1/2 relative">
+    <div className="px-16 py-8 md:px-32 md:py-16 md:flex w-full space-y-7 md:space-y-0 bg-gray-100">
+      <div className="md:w-1/2 relative">
         <h1 className="text-[50px]">Straight From The Heart</h1>
         <p className="text-[35px] leading-10">
           Here’s what Paras past patients have to say{" "}
         </p>
 
-        <button className="bg-gradient-to-r from-[#adcd81] to-[#00b9f2] m-20 text-white w-2/3 py-2">
+        <button className="bg-gradient-to-r from-[#adcd81] to-[#00b9f2]  mt-10 md:m-20 text-white w-2/3 py-2">
           Book Appointment
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-4 w-1/2">
+      <div className="grid md:grid-cols-2 gap-4 md:w-1/2">
         <div className="p-4 flex space-x-4  bg-white">
           <img
             src="https://content3.jdmagicbox.com/comp/hajipur/y5/9999px624.x624.190602142454.l9y5/catalogue/ravindra-kumar-singh-hajipur-3ze9igvkw8-250.jpg"
