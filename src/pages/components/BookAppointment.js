@@ -20,7 +20,13 @@ const BookAppointment = () => {
                 </>
                 <>
                 <label htmlFor='phone'>Your Disease</label>
-                <input id='phone' type="text" className='bg-white rounded-sm border-[2px] p-2' />
+                <select className="bg-white rounded-sm border-[2px] p-2">
+                    {["Coronary heart disease","Strokes and TIAs","Peripheral arterial disease","Aortic disease"].map((name,i)=>{
+                        return (
+                            <option key={i}>{name}</option>
+                        )
+                    })}
+                </select>
                 </>
                 <button className="bg-gradient-to-r from-[#adcd81] to-[#00b9f2] text-white w-full py-2">
           Book Appointment

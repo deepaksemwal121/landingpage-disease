@@ -20,18 +20,11 @@ button {
 .hero {
   background-color: #f0f0f5;
   height: 90vh;
-  z-index: -1;
 }
 
-.hero .hero__right {
-  /* background-image:url("https://images.unsplash.com/photo-1622253692010-333f2da6031d"); */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
 
 .symptoms-chest {
-  width: 527px;
+  width: 33%;
   height: 300px;
   background-image: linear-gradient(
       0deg,
@@ -45,7 +38,7 @@ button {
 }
 
 .symptoms-heart {
-  width: 527px;
+  width: 33%;
   height: 300px;
   background: linear-gradient(
       0deg,
@@ -59,7 +52,7 @@ button {
 }
 
 .symptoms-breath {
-  width: 528px;
+  width: 34%;
   height: 300px;
   display: flex;
   background-image: linear-gradient(
@@ -174,13 +167,13 @@ button {
     width: 100%;
   }
   .symptoms-breath,.symptoms-chest,.symptoms-heart{
-    width: 450px;
+    width: 100%;
   }
   .symptoms{
     font-size: 22px;
   }
   .hero{
-    height: 100vh;
+    height: 90vh;
   }
 }
 

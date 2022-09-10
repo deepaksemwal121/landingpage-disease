@@ -3,7 +3,7 @@ import doctor from "../assets/doctor.png";
 
 const Hero = () => {
   return (
-    <div className="hero w-full flex flex-col-reverse md:flex-row z-0 px-16 md:px-32 py-8 md:py-16">
+    <div className="hero w-full flex flex-col-reverse md:flex-row z-0 px-16 md:px-32 pt-8 md:pt-16">
       <div className="hero__left w-full md:w-1/3 flex flex-col  justify-center space-y-10 md:space-y-5">
         <h1 className="text-[#19205ez] text-[2rem] mt-12  md:text-[4rem] leading-tight">
           Coronary Artery By-pass Grafting(CABG)
@@ -12,7 +12,7 @@ const Hero = () => {
           Book Appointment
         </button>
       </div>
-      <div className="hero__right w-full md:w-2/3  md:flex relative flex-col justify-end items-center">
+      <div className=" w-full md:w-2/3  md:flex relative flex-col justify-end items-center">
         <img src={doctor} alt="doctor" width={600} />
         <div className="absolute bg-white shadow-sm rounded px-4 py-2 right-10 bottom-5 flex space-x-4 items-center">
           <div>
