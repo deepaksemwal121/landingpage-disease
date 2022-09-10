@@ -6,7 +6,7 @@ import logo from "../assets/logoParas.png";
 const Header = () => {
   const[open, setOpen]= useState(false)
   return (
-    <header className="w-full flex justify-between items-center relative py-4 md:px-32 px-16 mb-[-100px] z-20 ">
+    <header className="w-full flex justify-between items-center relative py-4 md:px-32 px-8 mb-[-100px] z-20 ">
       <div className="w-[25%]">
         <img src={logo} alt="logo" width={100} />
       </div>

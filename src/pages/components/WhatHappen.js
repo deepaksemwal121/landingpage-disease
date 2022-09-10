@@ -15,7 +15,7 @@ const WhatHappen = () => {
     setVideoLoading(!videoLoading);
   };
   return (
-    <div className="px-16 py-8 md:px-32 md:py-16 bg-gray-100 space-x-12 w-full md:flex">
+    <div className="px-8 py-8 md:px-32 md:py-16 bg-gray-100 space-x-12 w-full md:flex">
       <div className="md:w-1/2">
         <h1 className=" text-[40px] md:text-[50px]">What happens during CABG?</h1>
         <p className="text-lg mb-4">

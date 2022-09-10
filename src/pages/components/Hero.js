@@ -3,7 +3,7 @@ import doctor from "../assets/doctor.png";
 
 const Hero = () => {
   return (
-    <div className="hero w-full flex flex-col-reverse md:flex-row z-0 px-16 md:px-32 pt-8 md:pt-16">
+    <div className="hero w-full flex flex-col-reverse md:flex-row z-0 px-8 md:px-32 pt-8 md:pt-16">
       <div className="hero__left w-full md:w-1/3 flex flex-col  justify-center space-y-10 md:space-y-5">
         <h1 className="text-[#19205ez] text-[2rem] mt-12  md:text-[4rem] leading-tight">
           Coronary Artery By-pass Grafting(CABG)

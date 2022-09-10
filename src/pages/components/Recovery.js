@@ -3,7 +3,7 @@ import recover1 from "../assets/recover.webp";
 
 const Recovery = () => {
   return (
-    <div className="px-16 md:px-32 py-8 md:py-16 w-full">
+    <div className="px-8 md:px-32 py-8 md:py-16 w-full">
       <h1 className="text-center text-[40px] md:text-[50px] pb-20">
         Road to Recovery after CABG!
       </h1>

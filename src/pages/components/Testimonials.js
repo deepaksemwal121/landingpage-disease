@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div className="px-16 py-8 md:px-32 md:py-16 md:flex w-full space-y-7 md:space-y-0 bg-gray-100">
+    <div className="px-8 py-8 md:px-32 md:py-16 md:flex w-full space-y-7 md:space-y-0 bg-gray-100">
       <div className="md:w-1/2 relative">
         <h1 className="text-[50px]">Straight From The Heart</h1>
         <p className="text-[35px] leading-10">

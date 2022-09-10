@@ -1,6 +1,6 @@
 const WhyChoose = () => {
   return (
-    <div className="md:px-32 md:py-16 px-16 py-8 space-y-8">
+    <div className="md:px-32 md:py-16 px-8 py-8 space-y-8">
       <h1 className="text-[45px] text-center">Why Choose Paras</h1>
       <p className="text-center">
         Paras Healthcare is a leader in establishing specialized hospitals in

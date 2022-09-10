@@ -1,7 +1,7 @@
 const WhyAdvised = () => {
   return (
     <>
-      <div className="md:flex flex-col md:px-32 md:py-16 px-16 py-8">
+      <div className="md:flex flex-col md:px-32 md:py-16 px-8 py-8">
         <h1 className="text-center text-3xl mb-4">
           Why are you advised a Coronary Artery Bypass Graft?
         </h1>

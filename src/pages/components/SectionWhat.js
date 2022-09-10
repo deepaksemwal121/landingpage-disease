@@ -2,7 +2,7 @@ import React from "react";
 import what from "../assets/what.png";
 const SectionWhat = () => {
   return (
-    <div className="md:px-32 md:py-16 px-16 py-8 md:flex space-x-4 items-center bg-gray-100">
+    <div className="md:px-32 md:py-16 px-8 py-8 md:flex space-x-4 items-center bg-gray-100">
       <div className="md:w-1/2">
         <h1 className="text-[50px]">
           What is CABG

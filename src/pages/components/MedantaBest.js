@@ -2,7 +2,7 @@ import parasBest from "../assets/parasChoose.png";
 
 const MedantaBest = () => {
   return (
-    <div className=" px-16 py-8 md:px-32 md:py-16 w-full bg-gray-100 text md:space-x-8 md:flex">
+    <div className=" px-8 py-8 md:px-32 md:py-16 w-full bg-gray-100 text md:space-x-8 md:flex">
       <div className="md:w-1/2 space-y-4">
         <h1 className="text-[30px] md:text-[45px] border-b-2 w-fit border-blue-900 ">
           Get Treated By The Best
