@@ -18,7 +18,7 @@ const BookAppointment = () => {
       disease: "CABG",
     };
     try {
-      await axios.post(`http://localhost:4000/api/v1/customer/`, data);
+      await axios.post(`https://backend.aretehealth.tech/api/v1/customer/`, data);
       setDetails({ name: "", email: "", phone: "" });
       alert("Appointement Successfully Booked");
     } catch (err) {
