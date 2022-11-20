@@ -13,15 +13,15 @@ import WhyChoose from "./components/WhyChoose";
 const IVF = () => {
   return (
     <div className="">
-      <Header />
-      <Hero />
-      <SectionWhat />
-      <WhyAdvised />
-      <WhatHappen />
-      <Recovery />
-      <MedantaBest />
-      <WhyChoose />
-      <Testimonials />
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      {/* <SectionWhat /> */}
+      {/* <WhyAdvised /> */}
+      {/* <WhatHappen /> */}
+      {/* <Recovery /> */}
+      {/* <MedantaBest /> */}
+      {/* <WhyChoose /> */}
+      {/* <Testimonials /> */}
       <BookAppointment />
     </div>
   );
