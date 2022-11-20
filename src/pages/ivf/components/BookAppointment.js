@@ -63,7 +63,7 @@ const BookAppointment = () => {
           <>
             <label htmlFor="phone">Your Disease</label>
             <select className="bg-white rounded-sm border-[2px] p-2">
-              {["In Viro Fetility"].map((name, i) => {
+              {["In Vitro Fertilisation(IVF)", "Intrauterine Insemination (IUI)"].map((name, i) => {
                 return <option key={i}>{name}</option>;
               })}
             </select>
