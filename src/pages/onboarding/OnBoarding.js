@@ -163,7 +163,7 @@ const OnBoarding = () => {
                   <input
                     required
                     className="px-2 py-1 outline-none"
-                    placeholder="No. of Cash/Insurance"
+                    placeholder="No. of Cash/Insurance Patients"
                     value={item.cash}
                     onChange={(e) =>
                       setSelectedSpecs((state) => {
