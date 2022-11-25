@@ -36,7 +36,8 @@ const OnBoarding = () => {
   const [credentials, setCredentials] = useState([
     { name: "Approx. no of patients treated", value: "", canEdit: false },
     { name: "No of doctor", value: "", canEdit: false },
-    { name: "Hospital", value: "", canEdit: false },
+    { name: "Hospital Ranking", value: "", canEdit: false },
+    { name: "No. of specialties", value: "", canEdit: false },
   ]);
   const [files, setFiles] = useState({
     handbook: null,
