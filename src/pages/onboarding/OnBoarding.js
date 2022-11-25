@@ -1,22 +1,22 @@
 import axios from "axios";
 import React, { useState } from "react";
 const specialties = [
-  { id: 1, name: "Internal Medicine", opd: "", spoc: { name: "", contact: "" } },
-  { id: 2, name: "Respiratory Medicine", opd: "", spoc: { name: "", contact: "" } },
-  { id: 3, name: "Neurology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 4, name: "Rheumatology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 6, name: "ENT", opd: "", spoc: { name: "", contact: "" } },
-  { id: 7, name: "Orthopedics", opd: "", spoc: { name: "", contact: "" } },
-  { id: 8, name: "Obstetrics & Gynecology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 9, name: "Gastroenterology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 10, name: "Nephrology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 11, name: "Plastic Surgery", opd: "", spoc: { name: "", contact: "" } },
-  { id: 12, name: "Urology & KTP", opd: "", spoc: { name: "", contact: "" } },
-  { id: 13, name: "CTVS", opd: "", spoc: { name: "", contact: "" } },
-  { id: 14, name: "GI & Gen. Surgery", opd: "", spoc: { name: "", contact: "" } },
-  { id: 15, name: "Surgical Oncology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 16, name: "Medical Oncology", opd: "", spoc: { name: "", contact: "" } },
-  { id: 17, name: "Cardiology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 1, name: "Internal Medicine", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 2, name: "Respiratory Medicine", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 3, name: "Neurology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 4, name: "Rheumatology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 6, name: "ENT", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 7, name: "Orthopedics", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 8, name: "Obstetrics & Gynecology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 9, name: "Gastroenterology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 10, name: "Nephrology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 11, name: "Plastic Surgery", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 12, name: "Urology & KTP", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 13, name: "CTVS", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 14, name: "GI & Gen. Surgery", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 15, name: "Surgical Oncology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 16, name: "Medical Oncology", opd: "", spoc: { name: "", contact: "" } },
+  { cash: "", scheme: "", id: 17, name: "Cardiology", opd: "", spoc: { name: "", contact: "" } },
 ];
 const OnBoarding = () => {
   const [testimonials, setTestimonials] = useState(null);
@@ -32,11 +32,16 @@ const OnBoarding = () => {
     );
   };
   const [discounts, setDiscounts] = useState([{ discount: "", upgrades: "", perm: null }]);
+  const [contact, setContact] = useState({
+    fo: { name: "", contact: "" },
+    doctor: { name: "", contact: "" },
+  });
   const [training, setTraining] = useState([{ name: "", contact: "", position: "", department: "" }]);
   const [credentials, setCredentials] = useState([
     { name: "Approx. no of patients treated", value: "", canEdit: false },
     { name: "No of doctor", value: "", canEdit: false },
-    { name: "Hospital", value: "", canEdit: false },
+    { name: "Hospital Ranking", value: "", canEdit: false },
+    { name: "No. of specialties", value: "", canEdit: false },
   ]);
   const [files, setFiles] = useState({
     handbook: null,
@@ -69,6 +74,7 @@ const OnBoarding = () => {
         channel,
         baseline,
         // training,
+        contact,
         discounts,
         files,
         rulebookNote,
@@ -109,7 +115,7 @@ const OnBoarding = () => {
             })}
           </div>
         </div>
-        <div className="my-2 bg-gray-100 rounded-lg p-4">
+        {/* <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">2. Channel of patients</div>
           <div className="flex flex-wrap">
             <div className=" my-4 mr-4 flex">
@@ -131,11 +137,11 @@ const OnBoarding = () => {
               <div>Scheme (CGHS / Govt.)</div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* patient volume */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            3. Please provide the OPD Patient Volume for the selected departments with respect to channel.
+            2. Please provide the OPD Patient Volume for the selected departments with respect to channel.
           </div>
           <div className="">
             {selectedSpecs.map((item, i) => {
@@ -154,6 +160,30 @@ const OnBoarding = () => {
                       })
                     }
                   />
+                  <input
+                    required
+                    className="px-2 py-1 outline-none"
+                    placeholder="No of Cash Patients"
+                    value={item.cash}
+                    onChange={(e) =>
+                      setSelectedSpecs((state) => {
+                        state[i].cash = e.target.value;
+                        return [...state];
+                      })
+                    }
+                  />
+                  <input
+                    required
+                    className="px-2 py-1 outline-none"
+                    placeholder="No of Scheme Patient"
+                    value={item.scheme}
+                    onChange={(e) =>
+                      setSelectedSpecs((state) => {
+                        state[i].scheme = e.target.value;
+                        return [...state];
+                      })
+                    }
+                  />
                 </div>
               );
             })}
@@ -162,7 +192,7 @@ const OnBoarding = () => {
         {/* questions four */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            4. In order to determine the success rate of the pilot, we need to establish a current OPD to IPD Baseline
+            3. In order to determine the success rate of the pilot, we need to establish a current OPD to IPD Baseline
             for which the following 3 methods have been proposed. Kindly choose the appropriate option for you.
           </div>
           <div className="flex flex-wrap">
@@ -186,14 +216,64 @@ const OnBoarding = () => {
         {/* spoc details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            5. Please provide the details of the Single Point of Contact(s) (SPOC) on behalf of the hospital (Department
+            4. Please provide the details of the Single Point of Contact(s) (SPOC) on behalf of the hospital (Department
             wise)
           </div>
           <div className="">
             <div className=" my-4 mr-4 flex justify-between">
               <div className="w-48">Department</div>
-              <div className="w-48">SPOC</div>
+              <div className="w-48">SPOC Name</div>
               <div className="w-48">Contact Details</div>
+            </div>
+            <div className=" my-4 mr-4 flex justify-between">
+              <div className="w-48"> Head of FO (For discount /upgrades)</div>
+              <input
+                className="px-2 w-48 py-1 outline-none"
+                required
+                value={contact.fo.name}
+                onChange={(e) =>
+                  setContact((state) => {
+                    state.fo.name = e.target.value;
+                    return { ...state };
+                  })
+                }
+              />
+              <input
+                className="px-2 w-48 py-1 outline-none"
+                required
+                value={contact.fo.contact}
+                onChange={(e) =>
+                  setContact((state) => {
+                    state.fo.contact = e.target.value;
+                    return { ...state };
+                  })
+                }
+              />
+            </div>
+            <div className=" my-4 mr-4 flex justify-between">
+              <div className="w-48">Doctor Details</div>
+              <input
+                className="px-2 w-48 py-1 outline-none"
+                required
+                value={contact.doctor.name}
+                onChange={(e) =>
+                  setContact((state) => {
+                    state.doctor.name = e.target.value;
+                    return { ...state };
+                  })
+                }
+              />
+              <input
+                className="px-2 w-48 py-1 outline-none"
+                required
+                value={contact.doctor.contact}
+                onChange={(e) =>
+                  setContact((state) => {
+                    state.doctor.contact = e.target.value;
+                    return { ...state };
+                  })
+                }
+              />
             </div>
             {selectedSpecs.map((item, i) => {
               return (
@@ -229,7 +309,7 @@ const OnBoarding = () => {
         {/* discount details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            6. As a part of the OPD to IPD conversion process, what all discounts and upgrades will be available to us
+            5. As a part of the OPD to IPD conversion process, what all discounts and upgrades will be available to us
             that we can offer your patients (with and without your prior approval)
           </div>
           <div className="">
@@ -286,7 +366,7 @@ const OnBoarding = () => {
         </div>
         {/* policies and handbook */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
-          <div className="font-bold">7. Please upload the Hospital Policy and Guidelines Handbook for Admission.</div>
+          <div className="font-bold">6. Please upload the Hospital Policy and Guidelines Handbook for Admission.</div>
           <input
             required
             value={files.handbook}
@@ -298,7 +378,7 @@ const OnBoarding = () => {
         {/* service master */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            8. As a part of our solution, we have automated the financial estimate for patients. In order to utilize
+            7. As a part of our solution, we have automated the financial estimate for patients. In order to utilize
             this feature, we would require your service master along with your ‘Financial Pricing Rules’.
           </div>
           <div className="">
@@ -414,7 +494,7 @@ const OnBoarding = () => {
         {/* discount details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            9. Since we will be reaching out to your patients, we would want to know, do you currently follow any
+            8. Since we will be reaching out to your patients, we would want to know, do you currently follow any
             process to deal with unhappy OPD Patients? (For example – If a patient has conveyed that they or their
             family are not happy with hospital staff member, do you forward that patient’s detail to the hospital
             quality team?)
@@ -442,7 +522,7 @@ const OnBoarding = () => {
         {/* testimonials details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            10.Will it be possible for you to share some testimonials of your past patients, which we would like to
+            9.Will it be possible for you to share some testimonials of your past patients, which we would like to
             utilize for our OPD to IPD Conversion Process?
           </div>
           <div className="">
@@ -461,7 +541,7 @@ const OnBoarding = () => {
         {/* whatsapp details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            11. Please provide your WhatsApp Business Account, since out entire solution is based on WhatsApp. If you
+            10. Please provide your WhatsApp Business Account, since out entire solution is based on WhatsApp. If you
             don’t have one, please provide us with the permission to create one on your behalf or please let us know,
             who is the right person to get in touch with to create a WhatsApp Business Account for your organisation?
           </div>
@@ -499,7 +579,7 @@ const OnBoarding = () => {
         {/* hospital details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            12. As a part of our OPD to IPD conversion solution, we will be preparing certain creatives and content for
+            11. As a part of our OPD to IPD conversion solution, we will be preparing certain creatives and content for
             the hospital in order to improve OPD to IPD Conversion which would require certain hospital credentials,
             please provide the below mentioned details:
           </div>
@@ -542,7 +622,7 @@ const OnBoarding = () => {
         {/* additional details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            13. We would appreciate if you could provide any additional content like Hospital Video, Doctor Videos,
+            12. We would appreciate if you could provide any additional content like Hospital Video, Doctor Videos,
             Success Rate creative (if any).
           </div>
           <div className="">
