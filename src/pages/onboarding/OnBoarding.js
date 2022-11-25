@@ -151,7 +151,7 @@ const OnBoarding = () => {
                   <input
                     required
                     className="px-2 py-1 outline-none"
-                    placeholder="No of patients"
+                    placeholder="No. of patients"
                     value={item.opd}
                     onChange={(e) =>
                       setSelectedSpecs((state) => {
@@ -163,7 +163,7 @@ const OnBoarding = () => {
                   <input
                     required
                     className="px-2 py-1 outline-none"
-                    placeholder="No of Cash Patients"
+                    placeholder="No. of Cash/Insurance"
                     value={item.cash}
                     onChange={(e) =>
                       setSelectedSpecs((state) => {
@@ -175,7 +175,7 @@ const OnBoarding = () => {
                   <input
                     required
                     className="px-2 py-1 outline-none"
-                    placeholder="No of Scheme Patient"
+                    placeholder="No. of Scheme Patient"
                     value={item.scheme}
                     onChange={(e) =>
                       setSelectedSpecs((state) => {
@@ -541,7 +541,7 @@ const OnBoarding = () => {
         {/* whatsapp details */}
         <div className="my-2 bg-gray-100 rounded-lg p-4">
           <div className="font-bold">
-            10. Please provide your WhatsApp Business Account, since out entire solution is based on WhatsApp. If you
+            10. Please provide your WhatsApp Business Account, since our entire solution is based on WhatsApp. If you
             don’t have one, please provide us with the permission to create one on your behalf or please let us know,
             who is the right person to get in touch with to create a WhatsApp Business Account for your organisation?
           </div>
